@@ -8,11 +8,14 @@ const Drawer = createDrawerNavigator()
 import Home from './src/pages/Home'
 import Sobre from './src/pages/Sobre'
 import Contato from './src/pages/Contato'
+import CustomDrawer from './src/components/CustomDrawer'
 
 function App() {
   return (
     <NavigationContainer>
-     <Drawer.Navigator>
+     <Drawer.Navigator
+      drawerContent={CustomDrawer}
+     >
        <Drawer.Screen name="Home" component={Home} />
        <Drawer.Screen name="Sobre" component={Sobre} />
        <Drawer.Screen name="Contato" component={Contato} />
